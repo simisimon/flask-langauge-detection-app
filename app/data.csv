@@ -1,0 +1,7 @@
+"hallo, das ist ein Test",DE
+
+"Aufgrund der Rate Limits von DockerHub kam es in der zweiten Übungsgruppe zu Problemen. Deshalb verwenden Sie bitte für images in der GitLab CI sowie für images die mit Kaniko gebaut werden nicht DockerHub als registry. Als Alternative bietet sich zum Beispiel Amazon Elastic Container Registry (ECR) an. Ein Beispielimage für Python 3.9.16, das ohne Rate Limits geladen werden kann ist:",DE
+
+"We build autonomous systems that affect the world in a
+direct, physical manner, we risk bad actors accessing it. We
+risk glitches and errors causing physical harm.",EN

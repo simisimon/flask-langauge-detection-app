@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Detection Website!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center">
+        <h1>Language Detection Model v1.0</h1>
+        <div class="model">
+            Please enter sample text to detect the language.
+            <form id="form" action="{{ url_for('detect_language') }}" method="post">
+                <textarea id="text" name ="text" rows="4" placeholder="Walking on water and developing software from a specification are easy if both are frozen.">{% if language %} {{ text }} {% endif %}</textarea>
+                <br>
+                <input id="button" type="submit" value="Detect Language" name="Detect Language"/>
+            </form>
+            <div id="result">
+                <b>Input text:</b> {% if language %} {{ text }} {% endif %}
+                <br>
+                <b>The detected language is:</b> {% if language %} {{ language }} {% endif %}
+            </div>
+        </div>
+        <div class="feedback">
+            <h2>Please provide feedback!</h1>
+            
+            What language was: "{% if language %} {{ text }} {% endif %}"?
+
+            <form action="{{ url_for('store_data') }}" method="POST">
+                <input type="hidden" name="text" value="{{ text }}">
+                <input type="checkbox" id="lang1" name="language" value="DE">
+                <label for="vehicle1"> German</label><br>
+                <input type="checkbox" id="lang2" name="language" value="EN">
+                <label for="vehicle2"> English</label><br>
+                <input type="checkbox" id="lang3" name="language" value="ES">
+                <label for="vehicle3"> Spanish</label><br><br>
+                <input type="submit" value="Submit Feedback" name="Submit Feedback">
+              </form>
+
+        </div>
+    </div>
+</body>
+</html>

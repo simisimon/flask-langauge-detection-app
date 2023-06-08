@@ -1,0 +1,5 @@
+flask_env/
+flask_env/**
+flask_env/*
+__pycache__/*
+__pycache__/
