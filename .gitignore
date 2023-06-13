@@ -1,5 +1,5 @@
-flask_env/
-flask_env/**
-flask_env/*
+flask-env/
+flask-env/**
+flask-env/*
 __pycache__/*
 __pycache__/
