@@ -14,3 +14,6 @@ A simple flask web application, which classifies user input into english, german
 
     docker run -p 5000:5000 flask-lang-detection:latest
 
+### Run with Docker-Compose
+
+    docker compose up
