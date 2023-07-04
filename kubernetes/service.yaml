@@ -1,0 +1,12 @@
+  GNU nano 4.8                                          service.yaml                                                    apiVersion: v1
+kind: Service
+metadata:
+  namespace: demo
+  name: demo-svc
+spec:
+  selector:
+    app: flask-app
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 80

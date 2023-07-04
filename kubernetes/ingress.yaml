@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: demo
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  name: demo-ingress
+spec:
+  rules:
+    - host: demo.sws.informatik.uni-leipzig.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: demo-svc
+                port:
+                  number: 8080
+  tls:
+    - hosts:
+        - demo.sws.informatik.uni-leipzig.de
+      secretName: demo.sws.informatik.uni-leipzig.de-tls
