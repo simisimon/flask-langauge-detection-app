@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: flask-lang-detection
-          image: simisimon/flask-lang-detection:1.1
+          image: simisimon/flask-lang-detection:1.2
           ports:
             - containerPort: 8080
