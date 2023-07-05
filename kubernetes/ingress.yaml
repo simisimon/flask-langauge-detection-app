@@ -16,7 +16,7 @@ spec:
               service:
                 name: demo-svc
                 port:
-                  number: 80
+                  number: 8080
   tls:
     - hosts:
         - demo.sws.informatik.uni-leipzig.de
